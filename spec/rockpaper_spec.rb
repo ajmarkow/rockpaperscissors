@@ -51,4 +51,13 @@ describe(Player) do
     end
   end
 
+  describe('#markwin') do
+    it('checks that function selects one of the choices') do
+      fuzzle = Player.new("Fuzzle")
+      fuzzle.player_choice = "Rock"
+      fuzzle.computerchoice = "Scissors"
+      expect(fuzzle.mark_win()).to(eq("Player Wins"))
+    end
+  end
+
 end

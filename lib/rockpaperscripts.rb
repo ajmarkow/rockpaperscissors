@@ -1,8 +1,8 @@
- #!/usr/bin/env ruby
+#!/usr/bin/env ruby
 # require('rockpaper')
 puts 'enter your name'
-# choice = gets.chomp
-# puts "#{choice}" 
+choice = gets.chomp
+puts "Hi, #{choice}" 
 
 # #!/usr/bin/env ruby
 

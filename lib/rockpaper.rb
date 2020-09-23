@@ -1,10 +1,7 @@
-fuzzle = Player.new("F")
-  F.player_choose()
-
 class Player
   # attr_writer(:name)
   attr_reader(:name)
-  attr_accessor(:choices,:win,:scoretally)
+  attr_accessor(:choices, :win, :scoretally, :player_choice, :computerchoice)
   
   def initialize(name)
     @name = name
@@ -15,9 +12,9 @@ class Player
     @win = []
   end
 
-  def name=name
-    @name =name
-  end
+  # def name=name
+  #   @name =name
+  # end
 
   def choice_chooser()
     randomnumber = rand(1..3)
@@ -29,18 +26,21 @@ class Player
   end
 
 
-  def mark_win
-    case self.player_choice
-    when "Rock"
-      if self.computerchoice = "Scissors"
-        self.win.push("Player Wins")
-        scoretally += 1
-      elsif computerchoice = "Rock"
-        self.win.push("It's a tie")
-      else computerchoice ="Paper"
-        self.win.push("Computer Wins")
-    when "Paper"
-    when "Scissors"
-    end
-  end
+  # def mark_win
+  #   case self.player_choice
+  #   when "Rock"
+  #     if self.computerchoice == "Scissors"
+  #       self.win.push("Player Wins")
+  #       scoretally += 1
+  #     elsif computerchoice == "Rock"
+  #       self.win.push("It's a tie")
+  #     else computerchoice =="Paper"
+  #       self.win.push("Computer Wins")
+  #     end
+  #   when "Paper"
+  #     "placeholder"
+  #   when "Scissors"
+  #     "placeholder"
+  #   end
+  # end
 end
