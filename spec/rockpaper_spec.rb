@@ -37,4 +37,19 @@ describe(Player) do
     end
   end
 
+  describe('#initialize') do
+    it('checks that initial score tally is 0') do
+      fuzzle = Player.new("Fuzzle")
+      expect(fuzzle.scoretally).to(eq(0))
+    end
+  end
+  
+  describe('#choice_chooser') do
+    it('checks that function selects one of the choices') do
+      fuzzle = Player.new("Fuzzle")
+      expect(fuzzle.choice_chooser()).to(eq("Rock").or eq("Paper").or eq("Scissors"))
+      # expect(light.color).to eq("green").or eq("yellow").or eq("red")
+    end
+  end
+
 end

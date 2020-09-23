@@ -7,6 +7,7 @@ class Player
     @name = name
     # @choice = ""
     @choices = {1 => "Rock", 2 => "Paper", 3 => "Scissors"}
+    @selectedchoice = self.choice_chooser
     @scoretally = 0
     @win = []
   end
@@ -16,7 +17,9 @@ class Player
   end
 
   def choice_chooser()
-    # @choice = choice
+    randomnumber = rand(1..3)
+    choice = choices.fetch(randomnumber)
+    # choice = @choices.sample
   end
 end
 
