@@ -48,7 +48,6 @@ describe(Player) do
     it('checks that function selects one of the choices') do
       fuzzle = Player.new("Fuzzle")
       expect(fuzzle.choice_chooser()).to(eq("Rock").or eq("Paper").or eq("Scissors"))
-      # expect(light.color).to eq("green").or eq("yellow").or eq("red")
     end
   end
 
